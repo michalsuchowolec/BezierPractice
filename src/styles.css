@@ -1,0 +1,96 @@
+body {
+  font-family: sans-serif;
+  background-color: lightgrey;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  border-style: solid;
+  border-radius: 1px;
+  border-color: grey;
+}
+
+#app {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: stretch;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex: 2 1 50px;
+  padding: 0% 8%;
+}
+
+#menu .buttonContainer {
+  display: flex;
+  flex: 1 0 20%;
+}
+
+#canvasContainer {
+  display: flex;
+  flex: 12 10 auto;
+}
+
+.button {
+  display: block;
+  margin: auto auto;
+  min-height: calc(35px + 25%);
+  min-width: 85%;
+}
+
+canvas {
+  width: 350px;
+  height: 350px;
+  margin: auto auto;
+  background-color: white;
+}
+
+@media (min-aspect-ratio: 1/1) {
+  #app {
+    flex-direction: row;
+  }
+
+  #menu {
+    flex-direction: column;
+    flex-basis: 90px;
+    justify-content: flex-start;
+    padding: 3% 0% 5% 0%;
+  }
+
+  #menu .buttonContainer {
+    display: flex;
+    flex: 0 1 15%;
+  }
+  .button {
+    display: block;
+    margin: auto auto;
+    min-height: 90%;
+    min-width: 75%;
+  }
+
+  canvas {
+    width: 450px;
+    height: 300px;
+  }
+}
